@@ -1,0 +1,12 @@
+<h2>Add Expense</h2>
+<form id="addForm" name="addForm" ng-submit="submit()" novalidate>
+    <label>Date</label>
+    <input type="date" ng-model="expense.date"></input>
+    <label>Category:</label>
+    <select ng-model="expense.category" ng-options="category for category in categories" ng-required="true"></select>
+    <label>Amount:</label>
+    <input type="number" ng-model="expense.amount" ng-required = "true"></input>
+    <label>Description:</label>
+    <input type="text" ng-pattern="/^[a-zA-Z 0-9]*$/" ng-model="expense.description"></input>
+    <button ng-disabled="addForm.$pristine || addForm.$dirty && addForm.$invalid">Submit</button>
+</form>

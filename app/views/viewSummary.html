@@ -1,0 +1,21 @@
+<h2>Expense Details</h2>
+<div class="description">
+<table>
+  <tr>
+    <th>Sr. No.</th>
+    <th>Date</th>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Amount</th>
+  </tr>
+
+<tr class="exp-details" ng-repeat="expense in expenses">
+  <td class="col-sm-1">{{$index+1}} </td>
+  <td class="col-sm-3">{{expense.date}}</td>
+  <td class="col-sm-3">{{expense.category}} </td>
+  <td class="col-sm-3"> {{expense.description}}</td>
+  <td class="col-sm-2">{{expense.amount| currency:"$"}} </td>
+  
+</tr>
+</table>
+</div>
